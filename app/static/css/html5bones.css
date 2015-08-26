@@ -1,0 +1,94 @@
+
+html { background:#d8d8d8; }
+html.full { background:transparent; }
+body {
+    margin:0 auto;
+    background:#303030;
+    font-family:'Anaheim',sans-serif;
+}
+main { position:relative; }
+body > h1, main > h1 { padding-top:8%; }
+h1, h2 {
+    margin:0;
+    text-align:center;
+    color:#d8d8d8;
+    text-shadow:0 3px 2px rgba(0, 0, 0, 0.8);
+}
+h1 { font-size:2.5em; }
+h2 { font-size:1.5em; }
+abbr[title] { border-bottom:none; }
+a {
+    color:#ae4949;
+    text-decoration:none;
+}
+a:hover { text-decoration:underline; }
+a:visited { color:#928280; }
+footer a { color:#a60400; }
+h1 a { color:#d8d8d8; }
+h1 a:hover { text-decoration:none; }
+h1 a:visited { color:#d8d8d8; }
+section {
+    margin:2em auto;
+    width:95%;
+}
+section > h3 {
+    color:#d8d8d8;
+    position:absolute;
+    top:-9999px;
+    left:-9999px;
+}
+.buttons {
+    text-align:center;
+    overflow:hidden;
+    margin-bottom:1em;
+}
+p, ul { color:#d8d8d8; }
+ul {
+    list-style-type:none;
+    padding:0;
+}
+li { padding:.3em 0; }
+.download, .github {
+    text-align:center;
+    margin:0 0.6em 1em
+}
+.button {
+    padding:1em;
+    color:#d8d8d8;
+    background:#537577;
+    font-weight:bold;
+    display:block;
+    -moz-box-shadow:3px 3px 5px 3px #222;
+    -webkit-box-shadow:3px 3px 5px 3px #222;
+    box-shadow:3px 3px 5px 3px #222;
+}
+.button:hover {
+    text-decoration:none;
+    opacity:0.9;
+}
+.button .version { font-weight:normal; }
+footer {
+   left:0px;
+   bottom:0px;
+   height:100px;
+   width:100%;
+   color:#303030;
+   text-align:center;
+   background:#d8d8d8;
+   padding-top:1em;
+}
+footer p {
+    color:#303030;
+    font-size:.8em;
+}
+
+@media only screen and (min-width:36em) {
+    h1 {    font-size:4em; }
+    h2 { font-size:2em; }
+    section { width:60%; }
+    .buttons { margin:0 auto 2em; }
+    .download, .github {
+        float:left;
+        width:44%;
+    }
+}
