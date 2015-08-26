@@ -1,5 +1,8 @@
 from __future__ import absolute_import
 from __future__ import unicode_literals
+
+import os
+
 # Import flask and template operators
 from flask import Flask, render_template, request
 import redis
@@ -8,7 +11,10 @@ import redis
 app = Flask(__name__)
 
 # Configurations
-app.config.from_object('config.default')
+if os.environ.get('SHARESCAN_CONFIG'):
+    app.config.from_object('config.%s' % os.environ.get('SHARESCAN_CONFIG'))
+else:
+    app.config.from_object('config.DevelopmentConfig')
 
 # Define the database object which is imported
 # by modules and controllers
